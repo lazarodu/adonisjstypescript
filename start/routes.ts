@@ -30,4 +30,5 @@ Route.get("/projetos", "ProjetosController.index")
 Route.group(() => {
   Route.resource("projetos", 'ProjetosController').apiOnly().except(['index'])
   Route.resource("faqs", 'FaqsController').apiOnly()
+  Route.resource("curtir", 'ProjetoCurtirsController').apiOnly()
 }).middleware('auth')
