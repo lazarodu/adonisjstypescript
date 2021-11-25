@@ -9,9 +9,9 @@ import Env from '@ioc:Adonis/Core/Env'
 import { DatabaseConfig } from '@ioc:Adonis/Lucid/Database'
 import Url from "url-parse"
 let PG_URL
-if (Env.get('DATABASE_URL')) {
-  PG_URL = new Url(Env.get('DATABASE_URL'))
-}
+// if (Env.get('DATABASE_URL')) {
+PG_URL = new Url(Env.get('DATABASE_URL'))
+// }
 const databaseConfig: DatabaseConfig = {
   /*
   |--------------------------------------------------------------------------
